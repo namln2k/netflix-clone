@@ -1,8 +1,8 @@
 import Banner from '@/components/Banner';
 import Header from '@/components/Header';
+import Row from '@/components/Row';
 import { Movie } from '@/typings';
 import endpoints from '@/utils/apiEndpoints';
-import { Inter } from 'next/font/google';
 import Head from 'next/head';
 
 interface Props {
@@ -13,8 +13,6 @@ interface Props {
   netflixOriginals: Movie[];
   romanceMovies: Movie[];
 }
-
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({
   actionMovies,
@@ -38,13 +36,13 @@ export default function Home({
       <Header></Header>
       <main>
         <Banner netflixOriginals={netflixOriginals}></Banner>
-        <section>
-          {/* <Row></Row> */}
-          {/* <Row></Row> */}
-          {/* <Row></Row> */}
-          {/* <Row></Row> */}
-          {/* <Row></Row> */}
-          {/* <Row></Row> */}
+        <section className="pl-[24px] pt-[24vh] lg:pd-[64px]">
+          <Row title="Action" movies={actionMovies}></Row>
+          <Row title="Comedy" movies={comedyMovies}></Row>
+          <Row title="Documentary" movies={documentaries}></Row>
+          <Row title="Horror" movies={horrorMovies}></Row>
+          <Row title="Netflix Originals" movies={netflixOriginals}></Row>
+          <Row title="Romance" movies={romanceMovies}></Row>
         </section>
       </main>
       {/* <Modal></Modal> */}

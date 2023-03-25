@@ -12,6 +12,19 @@
   }
 }
 
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+}
+
 @layer components {
   .headerLink {
     @apply cursor-pointer text-sm font-light text-[#e5e5e5] transition duration-[400] hover:text-[#b3b3b3];

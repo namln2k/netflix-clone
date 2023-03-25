@@ -37,13 +37,13 @@ export default function Banner({ netflixOriginals }: Props) {
               style={{ objectFit: 'cover' }}
             ></Image>
           </div>
-          <div className="pl-[10%] pt-[25vh] max-w-[75%]">
+          <div className="pl-[24px] pt-[25vh] max-w-[80%] lg:pd-[64px]">
             <h1 className="text-2xl font-bold md:text-4xl lg:text-6xl">
               {featuredMovie?.title ||
                 featuredMovie?.name ||
                 featuredMovie?.original_name}
             </h1>
-            <h1>{featuredMovie?.overview}</h1>
+            <h1 className="text-justify">{featuredMovie?.overview}</h1>
           </div>
         </>
       )}
